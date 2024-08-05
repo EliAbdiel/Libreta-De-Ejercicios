@@ -58,3 +58,21 @@ Por defecto, el texto sobrescribe cualquier texto existente, si deseas agregar e
 FileWriter writer = new FileWriter("data.txt", true);
 ```
 Nota el true como el segundo argumento del constructor FileWriter.
+
+**Crear**
+
+Para crear un archivo en Java, usa el constructor de la clase File con el nombre de archivo deseado y luego ejecuta el método createNewFile(). El método devolverá true si el archivo se creó con éxito, o false si el archivo ya existe:
+```java
+try {
+  File file = new File("data.txt");
+  if (file.createNewFile()) {
+    System.out.println("Archivo creado: " + file.getName());
+  } else {
+    System.out.println("El archivo ya existe.");
+  }
+} catch (IOException e) {
+  System.out.println("Ocurrió un error.");
+  e.printStackTrace();
+}
+```
+El código anterior crea el archivo llamado "data.txt", nota que debes manejar la excepción IOException.
