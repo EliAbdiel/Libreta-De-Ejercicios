@@ -26,10 +26,10 @@ try {
   File dataFile = new File("data.txt");
   Scanner scanner = new Scanner(dataFile);
   while (scanner.hasNextLine()) {
-  String data = scanner.nextLine();
-  System.out.println(data);
-}
-scanner.close();
+    String data = scanner.nextLine();
+    System.out.println(data);
+  }
+  scanner.close();
 } catch (FileNotFoundException e) {
   System.out.println("Ocurrió un error.");
   e.printStackTrace();
