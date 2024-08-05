@@ -23,16 +23,16 @@ El código anterior imprime el nombre, la ruta absoluta y el tamaño del archivo
 Una forma de leer el contenido de un archivo en Java es utilizando la clase Scanner, que también se usa para obtener entrada:
 ```java
 try {
-File dataFile = new File("data.txt");
-Scanner scanner = new Scanner(dataFile);
-while (scanner.hasNextLine()) {
-String data = scanner.nextLine();
-System.out.println(data);
+  File dataFile = new File("data.txt");
+  Scanner scanner = new Scanner(dataFile);
+  while (scanner.hasNextLine()) {
+  String data = scanner.nextLine();
+  System.out.println(data);
 }
 scanner.close();
 } catch (FileNotFoundException e) {
-System.out.println("Ocurrió un error.");
-e.printStackTrace();
+  System.out.println("Ocurrió un error.");
+  e.printStackTrace();
 }
 ```
 El código anterior lee e imprime cada línea del archivo "data.txt".
