@@ -38,3 +38,23 @@ try {
 El código anterior lee e imprime cada línea del archivo "data.txt".
 Ten en cuenta que debes envolver el código con try-catch y manejar la excepción `FileNotFoundException`.
 
+**Escribir**
+
+Para escribir en un archivo en Java, podemos usar la clase FileWriter:
+```java
+try {
+  FileWriter writer = new FileWriter("data.txt");
+  writer.write("¡Este es el nuevo contenido del archivo data.txt!");
+  writer.close();
+} catch (IOException e) {
+  System.out.println("Ocurrió un error.");
+  e.printStackTrace();
+}
+```
+El código anterior escribe algún texto en el archivo "data.txt", nota que debes manejar la excepción IOException.
+
+Por defecto, el texto sobrescribe cualquier texto existente, si deseas agregar el texto al contenido ya existente del archivo, usa esto:
+```java
+FileWriter writer = new FileWriter("data.txt", true);
+```
+Nota el true como el segundo argumento del constructor FileWriter.
