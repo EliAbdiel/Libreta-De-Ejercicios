@@ -1,6 +1,6 @@
 # Manejo de archivos en Java
 
-En Java, puedes manejar archivos usando la clase File ubicada en el paquete java.io:
+En Java, puedes manejar archivos usando la clase `File` ubicada en el paquete java.io:
 '''java
 import java.io.File;
 '''
