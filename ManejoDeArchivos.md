@@ -19,6 +19,7 @@ System.out.println("Tamaño del archivo en bytes: " + dataFile.length());
 El código anterior imprime el nombre, la ruta absoluta y el tamaño del archivo data.txt.
 
 **Leer**
+
 Una forma de leer el contenido de un archivo en Java es utilizando la clase Scanner, que también se usa para obtener entrada:
 ```java
 try {
@@ -38,6 +39,7 @@ El código anterior lee e imprime cada línea del archivo "data.txt".
 Ten en cuenta que debes envolver el código con try-catch y manejar la excepción `FileNotFoundException`.
 
 **Escribir**
+
 Para escribir en un archivo en Java, podemos usar la clase FileWriter:
 ```java
 try {
@@ -58,6 +60,7 @@ FileWriter writer = new FileWriter("data.txt", true);
 Nota el true como el segundo argumento del constructor FileWriter.
 
 **Crear**
+
 Para crear un archivo en Java, usa el constructor de la clase File con el nombre de archivo deseado y luego ejecuta el método createNewFile(). El método devolverá true si el archivo se creó con éxito, o false si el archivo ya existe:
 ```java
 try {
@@ -75,6 +78,7 @@ try {
 El código anterior crea el archivo llamado "data.txt", nota que debes manejar la excepción IOException.
 
 **Eliminar**
+
 Por último, para eliminar un archivo en Java, usa el método delete() de la clase File. El método devolverá true si el archivo se eliminó con éxito, o false si falló:
 ```java
 File file = new File("data.txt"); 
