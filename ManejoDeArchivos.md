@@ -79,7 +79,7 @@ El código anterior crea el archivo llamado "data.txt", nota que debes manejar l
 
 **Eliminar**
 
-Por último, para eliminar un archivo en Java, usa el método delete() de la clase File. El método devolverá true si el archivo se eliminó con éxito, o false si falló:
+Para eliminar un archivo en Java, usa el método delete() de la clase File. El método devolverá true si el archivo se eliminó con éxito, o false si falló:
 ```java
 File file = new File("data.txt"); 
 if (file.delete()) { 
@@ -89,3 +89,19 @@ if (file.delete()) {
 }
 ```
 El código anterior intenta eliminar el archivo llamado "data.txt".
+
+**Extras**
+
+Hay algunas operaciones importantes finales. Para verificar si un archivo existe, puedes usar el método exists():
+```java
+File fileObj = new File("file.txt");
+if (fileObj.exists()) {
+    System.out.println("¡file.txt existe!");
+} else {
+    System.out.println("file.txt no existe.");
+}
+```
+Otros dos métodos:
+
+- mkdir(): Crea un directorio.
+- list(): Devuelve un array de los archivos en el directorio (String[]).
